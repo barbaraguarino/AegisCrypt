@@ -37,7 +37,11 @@ Para compilar e executar o projeto, você precisa ter instalado:
 
 ### Como Compilar e Executar
 
-Este projeto utiliza o Apache Maven para gerenciar a compilação e o empacotamento, simplificando todo o processo.
+Existem duas maneiras de compilar e executar este projeto. O método com Maven é o recomendado por ser mais simples e padronizado.
+
+#### Método 1: Com Apache Maven (Recomendado)
+
+Este projeto utiliza o Apache Maven para gerenciar a compilação e o empacotamento.
 
 1.  **Clone o repositório:**
     ```bash
@@ -60,6 +64,30 @@ Este projeto utiliza o Apache Maven para gerenciar a compilação e o empacotame
     Use o comando `java -jar` para iniciar o programa a partir do arquivo `.jar` gerado.
     ```bash
     java -jar target/aegiscrypt-1.0.0.jar
+    ```
+
+#### Método 2: Manualmente (Apenas com JDK)
+
+Se você não tiver o Apache Maven instalado, pode compilar e executar o projeto manualmente, desde que tenha o JDK (versão 21 ou superior) configurado em seu sistema.
+
+1.  **Clone o repositório e navegue até o diretório**, como nos passos 1 e 2 do método anterior.
+
+2.  **Crie um diretório para os arquivos compilados:**
+    Isso ajuda a manter o projeto organizado.
+    ```bash
+    mkdir bin
+    ```
+
+3.  **Compile os arquivos-fonte:**
+    Este comando compila todos os arquivos `.java` e coloca os `.class` resultantes no diretório `bin`.
+    ```bash
+    javac -d bin src/main/java/com/aegiscrypt/Main.java src/main/java/com/aegiscrypt/config/CryptoConfig.java src/main/java/com/aegiscrypt/model/EncryptedPayload.java src/main/java/com/aegiscrypt/service/EncryptionService.java src/main/java/com/aegiscrypt/service/impl/AegisCryptService.java
+    ```
+
+4.  **Execute a aplicação:**
+    Este comando inicia o programa, especificando que as classes compiladas estão no diretório `bin`.
+    ```bash
+    java -cp bin com.aegiscrypt.Main
     ```
 
 ### Como Usar
