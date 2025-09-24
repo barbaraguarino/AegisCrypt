@@ -4,8 +4,6 @@
 
 AegisCrypt é uma ferramenta de linha de comando (CLI) desenvolvida em Java para criptografia e descriptografia de textos de forma simples e segura. O projeto utiliza padrões de criptografia modernos e robustos para garantir a confidencialidade e a integridade dos seus dados.
 
----
-
 ### Tabela de Conteúdos
 
 - [Sobre o Projeto](#sobre-o-projeto)
@@ -16,15 +14,11 @@ AegisCrypt é uma ferramenta de linha de comando (CLI) desenvolvida em Java para
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Licença](#licença)
 
----
-
 ### Sobre o Projeto
 
 O objetivo do AegisCrypt é fornecer uma solução de criptografia acessível e confiável para uso pessoal, diretamente do terminal.
 
 A segurança é garantida pelo uso do algoritmo **AES-256 no modo GCM**, que oferece criptografia autenticada, protegendo não apenas contra a interceptação dos dados, mas também contra sua manipulação. A chave de criptografia é derivada de uma senha fornecida pelo usuário através do **PBKDF2**, um padrão da indústria para derivação de chaves baseadas em senha.
-
----
 
 ### Principais Funcionalidades
 
@@ -35,15 +29,12 @@ A segurança é garantida pelo uso do algoritmo **AES-256 no modo GCM**, que ofe
 -   **Multiplataforma:** Por ser feito em Java, o programa roda em Windows, macOS e Linux.
 -   **Autocontido:** Não requer dependências externas, apenas um JDK instalado.
 
----
-
 ### Pré-requisitos
 
 Para compilar e executar o projeto, você precisa ter instalado:
 
 -   **Java Development Kit (JDK)** - Versão 21 ou superior.
 
----
 
 ### Como Compilar e Executar
 
@@ -68,8 +59,6 @@ Para compilar e executar o projeto, você precisa ter instalado:
     ```bash
     java -cp bin com.aegiscrypt.Main
     ```
-
----
 
 ### Como Usar
 
@@ -97,8 +86,6 @@ Escolha uma opção:
     -   Digite a **mesma senha** usada para criptografar.
     -   Se a senha estiver correta, o texto original será exibido.
 
----
-
 ### Estrutura do Projeto
 
 O código-fonte está organizado em pacotes que separam as responsabilidades:
@@ -118,8 +105,6 @@ aegiscrypt/
                 └── impl/
                     └── AegisCryptService.java # Implementação da lógica de criptografia
 ```
-
----
 
 ### Licença
 
