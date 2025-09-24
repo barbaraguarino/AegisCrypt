@@ -35,12 +35,13 @@ Para compilar e executar o projeto, você precisa ter instalado:
 
 -   **Java Development Kit (JDK)** - Versão 21 ou superior.
 
-
 ### Como Compilar e Executar
+
+Este projeto utiliza o Apache Maven para gerenciar a compilação e o empacotamento, simplificando todo o processo.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/aegiscrypt.git](https://github.com/seu-usuario/aegiscrypt.git)
+    git clone [https://github.com/barbaraguarino/aegiscrypt.git](https://github.com/barbaraguarino/aegiscrypt.git)
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -48,16 +49,17 @@ Para compilar e executar o projeto, você precisa ter instalado:
     cd aegiscrypt
     ```
 
-3.  **Compile os arquivos-fonte:**
-    O comando abaixo irá compilar todos os arquivos `.java` da pasta `src` e colocar os `.class` gerados em uma nova pasta `bin`.
+3.  **Compile e empacote o projeto com o Maven:**
+    Este único comando irá compilar todo o código-fonte e criar um arquivo `.jar` executável na pasta `target/`.
     ```bash
-    javac -d bin src/com/aegiscrypt/Main.java src/com/aegiscrypt/config/CryptoConfig.java src/com/aegiscrypt/model/EncryptedPayload.java src/com/aegiscrypt/service/EncryptionService.java src/com/aegiscrypt/service/impl/AegisCryptService.java
+    mvn package
     ```
+    Ao final do processo, você verá uma mensagem de `BUILD SUCCESS`.
 
 4.  **Execute a aplicação:**
-    Este comando inicia o programa, que ficará aguardando suas instruções no terminal.
+    Use o comando `java -jar` para iniciar o programa a partir do arquivo `.jar` gerado.
     ```bash
-    java -cp bin com.aegiscrypt.Main
+    java -jar target/aegiscrypt-1.0.0.jar
     ```
 
 ### Como Usar
